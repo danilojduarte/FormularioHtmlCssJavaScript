@@ -58,10 +58,30 @@ body {
     position: absolute;
     bottom:  -8px;
     left: 0;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .form-content button {
     background-color: #00c3ff;
     color: #fff;
+}
+
+.form button {
+    background-color: #00c3ff;
+    color: #fff;
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.form-content.error input {
+    border-color: #ff3b25;
+}
+
+.form-content.error a {
+    border-color: #ff3b25;
 }
