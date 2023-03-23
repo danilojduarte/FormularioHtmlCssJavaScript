@@ -84,4 +84,5 @@ body {
 
 .form-content.error a {
     border-color: #ff3b25;
+    visibility: visible;
 }
