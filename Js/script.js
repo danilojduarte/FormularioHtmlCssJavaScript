@@ -10,6 +10,7 @@ form.addEventListener("submit", (event) => {
   checkInputUsername();
   checkInputEmail();
   checkInputPassword();
+  checkInputPasswordConfirmation ();
 });
 
 function checkInputUsername() {
@@ -46,6 +47,23 @@ function checkInputPassword() {
     formItem.className = "form-content";
   }
 }
+
+function checkInputPasswordConfirmation () {
+    const passwordValue = password.value;
+    const confirmationPassowordValue = passwordConfirmation.value;
+
+    if (confirmationPassowordValue === "") {
+        errorInput(passwordConfirmation, "A confirmação de senha é obrigatória.")
+    } else if (confirmationPassowordValue !== passwordValue) {
+        errorInput(passwordConfirmation, "As senhas não são iguais.")
+    } else {
+        const formItem = passwordConfirmation.parentElement;
+        formItem.className = "form-content"
+    }
+}
+
+
+
 
 function errorInput(input, message) {
   const formItem = input.parentElement;
