@@ -16,6 +16,9 @@ function checkInputUsername (){
 
     if (usernameValue === ""){
         errorInput(username, "Preencha um username!")
+    } else {
+        const formItem = username.parentElement;
+        formItem.classList = "form-content"
     }
     
 }
