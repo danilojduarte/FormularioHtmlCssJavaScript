@@ -7,10 +7,6 @@ const passwordConfirmation = document.getElementById("password-confirmation");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  checkInputUsername();
-  checkInputEmail();
-  checkInputPassword();
-  checkInputPasswordConfirmation ();
 });
 
 function checkInputUsername() {
@@ -60,6 +56,15 @@ function checkInputPasswordConfirmation () {
         const formItem = passwordConfirmation.parentElement;
         formItem.className = "form-content"
     }
+}
+
+function checkForm () {
+  checkInputUsername();
+  checkInputEmail();
+  checkInputPassword();
+  checkInputPasswordConfirmation ();
+
+  
 }
 
 
